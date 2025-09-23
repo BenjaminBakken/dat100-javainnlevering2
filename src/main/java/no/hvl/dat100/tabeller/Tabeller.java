@@ -5,16 +5,40 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		for (int i = 0; i < tabell.length; i++) { // Itererer gjennom tabell
+
+            if (i == 0) {
+                System.out.print("["); // Printer start av tabell før første element.
+            }
+            if (i > 0) {
+                System.out.print(", "); // Printer mellomrom mellom element før alle andre element enn det første elementet.
+            }
+            System.out.print(tabell[i]); // Printer selve elementet.
+            if (i == tabell.length - 1) {
+                System.out.println("]"); // Printer slutt av tabell etter siste element.
+            }
+        }
 
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+        String tabellInnhold = "";
+        for (int i = 0; i < tabell.length; i++) { // Itererer gjennom tabell
+
+            if (i == 0) {
+                tabellInnhold += "["; // Legger til start av tabell før første element i strengen.
+            }
+            if (i > 0) {
+                tabellInnhold += ","; // Legger til mellomrom mellom element før alle andre element enn det første elementet i strengen.
+            }
+            tabellInnhold += Integer.toString(tabell[i]); // Legger til selve elementet i strengen.
+            if (i == tabell.length - 1) {
+                tabellInnhold += "]"; // Printer slutt av tabell etter siste element.
+            }
+        }
+        return tabellInnhold;
 	}
 
 	// c)
