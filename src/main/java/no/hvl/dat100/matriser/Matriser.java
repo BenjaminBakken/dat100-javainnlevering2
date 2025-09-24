@@ -100,7 +100,7 @@ public class Matriser {
         int[][] produktMatrise = new int[aRader][bKolonner];
 
         if (bRader != aKolonner) { // Sjekker om matriser kan multipliseres (antall kolonner i a må vere lik rader i b)
-            // Printer feilmelding og stopper metoden ved å returnere tom matrise.
+            // Hvis matriser ikke kan multipliseres: Printer feilmelding og stopper metoden ved å returnere tom matrise.
             System.out.print("Kan ikke multiplisere matriser. Antall kolonner i første matrise må være lik rader i andre matrise");
             return produktMatrise;
         }
